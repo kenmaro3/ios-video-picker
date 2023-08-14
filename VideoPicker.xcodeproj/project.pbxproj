@@ -11,6 +11,10 @@
 		0AC20E0C2A8A001800B49F4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC20E0B2A8A001800B49F4B /* ContentView.swift */; };
 		0AC20E0E2A8A001D00B49F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC20E0D2A8A001D00B49F4B /* Assets.xcassets */; };
 		0AC20E112A8A001D00B49F4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC20E102A8A001D00B49F4B /* Preview Assets.xcassets */; };
+		0AC20E192A8A006000B49F4B /* MoviePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC20E182A8A006000B49F4B /* MoviePlayerView.swift */; };
+		0AC20E1C2A8A008400B49F4B /* CoordinateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC20E1B2A8A008400B49F4B /* CoordinateModel.swift */; };
+		0AC20E1E2A8A00BF00B49F4B /* PhotoLibraryMoviePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC20E1D2A8A00BF00B49F4B /* PhotoLibraryMoviePickerView.swift */; };
+		0AC20E202A8A014200B49F4B /* CameraMoviePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC20E1F2A8A014200B49F4B /* CameraMoviePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		0AC20E0B2A8A001800B49F4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AC20E0D2A8A001D00B49F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC20E102A8A001D00B49F4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AC20E182A8A006000B49F4B /* MoviePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePlayerView.swift; sourceTree = "<group>"; };
+		0AC20E1B2A8A008400B49F4B /* CoordinateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateModel.swift; sourceTree = "<group>"; };
+		0AC20E1D2A8A00BF00B49F4B /* PhotoLibraryMoviePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryMoviePickerView.swift; sourceTree = "<group>"; };
+		0AC20E1F2A8A014200B49F4B /* CameraMoviePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraMoviePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,8 @@
 		0AC20E082A8A001800B49F4B /* VideoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				0AC20E1A2A8A007B00B49F4B /* Model */,
+				0AC20E172A8A005600B49F4B /* View */,
 				0AC20E092A8A001800B49F4B /* VideoPickerApp.swift */,
 				0AC20E0B2A8A001800B49F4B /* ContentView.swift */,
 				0AC20E0D2A8A001D00B49F4B /* Assets.xcassets */,
@@ -65,6 +75,24 @@
 				0AC20E102A8A001D00B49F4B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0AC20E172A8A005600B49F4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AC20E182A8A006000B49F4B /* MoviePlayerView.swift */,
+				0AC20E1D2A8A00BF00B49F4B /* PhotoLibraryMoviePickerView.swift */,
+				0AC20E1F2A8A014200B49F4B /* CameraMoviePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AC20E1A2A8A007B00B49F4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0AC20E1B2A8A008400B49F4B /* CoordinateModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC20E202A8A014200B49F4B /* CameraMoviePickerView.swift in Sources */,
 				0AC20E0C2A8A001800B49F4B /* ContentView.swift in Sources */,
+				0AC20E1C2A8A008400B49F4B /* CoordinateModel.swift in Sources */,
+				0AC20E192A8A006000B49F4B /* MoviePlayerView.swift in Sources */,
 				0AC20E0A2A8A001800B49F4B /* VideoPickerApp.swift in Sources */,
+				0AC20E1E2A8A00BF00B49F4B /* PhotoLibraryMoviePickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +307,14 @@
 				DEVELOPMENT_TEAM = B4C7245FA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow us to use camera for app usage";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow us to use microphone for app usage";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +339,14 @@
 				DEVELOPMENT_TEAM = B4C7245FA7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow us to use camera for app usage";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow us to use microphone for app usage";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
